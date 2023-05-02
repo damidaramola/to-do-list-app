@@ -35,3 +35,49 @@ header h1{
    color:var(--gray);
    margin-bottom:1rem;
 }
+
+#new-form{
+    display:flex;
+
+}
+
+input,button{
+    appearance: none;
+    border:none;
+    outline:none;
+    background:none;
+}
+
+#new-input{
+    flex:1 1 0%;
+    background-color:var(--darker);
+    padding:1rem;
+    border-radius:1rem;
+    margin-right:1rem;
+    color:var(--light);
+    font-size: 1.25rem;
+}
+
+#new-input::placeholder{
+color:var(--gray);
+}
+
+#new-submit{
+    color: var(--pink);
+    font-size:1.25rem;
+    font-weight:700;
+    background-image: linear-gradient(to right,var(--pink),
+    var(--purple));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    curser:pointer;
+    transition:0.4s;
+}
+
+#new-submit:hover{
+ opacity:0.8;
+}
+
+#new-submit:active{
+    opacity:0.6;  
+}
