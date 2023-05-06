@@ -103,8 +103,12 @@ main {
   background-color: var(--darkest);
   padding: 1rem;
   border-radius: 1rem;
+  margin-bottom: 1rem;
 }
 
+#tasks .do-task {
+    flex:1 1 0%;
+}
 #tasks .do-task .content .text {
   color: white;
   font-size: 1.125rem;

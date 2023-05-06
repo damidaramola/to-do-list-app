@@ -16,7 +16,7 @@ window.addEventListener('load',()=>{
     } 
     
     const task_element = document.createElement('div');
-    task_element.classList.add('task');
+    task_element.classList.add('do-task');
 
     const task_content_element = document.createElement('div'); 
     task_content_element.classList.add('content');
@@ -38,10 +38,36 @@ window.addEventListener('load',()=>{
 
     const task_edit_element= document.createElement('button');
     task_edit_element.classList.add('edit-field');
+    task_edit_element.innerHTML ='Edit';
 
     const task_delete_element = document.createElement('button');
     task_delete_element.classList.add('delete-field');
+    task_delete_element.innerHTML = 'Delete';
+    
+    task_actions_element.appendChild(task_edit_element);
+    task_actions_element.appendChild(task_delete_element);
+
+    task_element.appendChild(task_actions_element)
 
     list_element.appendChild(task_element);
-     })
-})
+
+    input.value = "";
+
+    // add ability to edit then save tasks
+
+    task_edit_element.addEventListener('click',() => {
+    if (task_edit_element.innerText.toLowerCase() == 'edit'){
+        task_input_element.removeAttribute('readonly');
+        task_input_element.focus();
+        task_edit_element.innerText ='Save'
+    }else {
+        task_input_element.setAttribute('readonly','readonly');
+        task_edit_element.innerText = 'Edit';
+    }
+    });
+
+    task_delete_element.addEventListener('click',() =>{
+      list_element.removeChild(task_element)
+    });
+     });
+});
