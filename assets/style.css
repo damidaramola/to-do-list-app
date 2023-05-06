@@ -148,9 +148,5 @@ main {
 }
 
 .do-task .actions .delete-field{
-    background-image: linear-gradient(to right, var(--pink), var(--purple));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    curser: pointer;
-    transition: 0.4s; 
+    color: rgb(120, 7, 7);
 }
